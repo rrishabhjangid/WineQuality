@@ -39,14 +39,15 @@ with col3:
     pH = st.number_input("pH", min_value=0.0, max_value=5.0, value=3.19, step=0.01)
 
 # Predict button
+# Predict button
 if st.button("Predict Wine Quality"):
-    # Group inputs into a dataframe (matching the training data columns)
+    # Notice the columns list now uses spaces instead of underscores
     input_data = pd.DataFrame([[
         fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides,
         free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol
     ]], columns=[
-        'fixed_acidity', 'volatile_acidity', 'citric_acid', 'residual_sugar', 'chlorides',
-        'free_sulfur_dioxide', 'total_sulfur_dioxide', 'density', 'pH', 'sulphates', 'alcohol'
+        'fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides',
+        'free sulfur dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol'
     ])
     
     # Scale the features
